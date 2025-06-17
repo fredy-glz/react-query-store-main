@@ -15,6 +15,7 @@ export const ProductCard = ({
 }: Props) => {
   return (
     <Link
+      className="relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 max-w-xs md:max-w-3xl mx-auto border border-white bg-white"
       to={`/product/${product.id}`}
       onMouseEnter={() => prefetchProduct && prefetchProduct(product.id)}
     >
@@ -39,7 +40,7 @@ export const ProductCard = ({
           <p className="md:text-lg text-gray-500 text-base">
             {fullDescription
               ? product.description
-              : `${product.description.slice(0, 50)}}...`}
+              : `${product.description.slice(0, 50)}...`}
           </p>
 
           <p className="text-xl font-black text-gray-800">
